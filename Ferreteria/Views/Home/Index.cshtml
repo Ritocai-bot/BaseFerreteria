@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inicio</title>
+
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+    <link href="~/CSS/Header_Estilo.css" rel="stylesheet" type="text/css"/>
+    <link href="~/CSS/Footer_Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Login_Estilo.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body>
+    @RenderPage("~/Views/Secciones/Header.cshtml")
+    <div> 
+        @{
+            if (true)
+            {
+                <img class="Logo_Cliente" src="#" />
+            }
+            else
+            {
+                @RenderPage("~/Views/Home/Login.cshtml")
+            }
+        }        
+    </div>
+</body>
+    @RenderPage("~/Views/Secciones/Footer.cshtml")
+</html>
