@@ -22,14 +22,14 @@
 
     <link href="~/CSS/Header_Estilo.css" rel="stylesheet" type="text/css" />
     <link href="~/CSS/Footer_Estilo.css" rel="stylesheet" type="text/css" />  
-    <link href="~/CSS/Usuarios_Estilo.css" rel="stylesheet" type="text/css" />  
+    <link href="~/CSS/General_Estilo.css" rel="stylesheet" type="text/css" />  
 
     <link href="~/fontawesome/css/all.css" rel="stylesheet" />
           
 
 </head>
 <body>
-    @RenderPage("~/Views/Secciones/Header.cshtml")
+    @RenderPage("~/Views/Secciones/Header.cshtml")    
 
     <div class="Agregar">
         <a href="@Url.Action("Crear","Usuarios")">
@@ -85,7 +85,9 @@
                                 <td>Cairo Moreno</td>
                                 <td>Gerente</td>
                                 <td>78787878</td>
-                                <td></td>
+                                <td>
+                                    <a href="@Url.Action("Editar", "Usuarios", new {id = 2 })"><i class="fa fa-pencil-alt"></i></a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

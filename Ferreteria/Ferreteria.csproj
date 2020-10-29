@@ -96,7 +96,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="CSS\Index_Estilo.css" />
     <Content Include="CSS\Login_Estilo.css" />
-    <Content Include="CSS\Usuarios_Estilo.css" />
+    <Content Include="CSS\General_Estilo.css" />
     <Content Include="DataTables\DataTables-1.10.22\css\dataTables.bootstrap.css" />
     <Content Include="DataTables\DataTables-1.10.22\css\dataTables.bootstrap.min.css" />
     <Content Include="DataTables\DataTables-1.10.22\css\dataTables.bootstrap4.css" />
@@ -1780,6 +1780,8 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Logo.PNG" />
+    <Content Include="Imagenes\Logo_Empresa.PNG" />
     <Content Include="Imagenes\Paquete1\png\001-smartphone.png" />
     <Content Include="Imagenes\Paquete1\png\002-megaphone.png" />
     <Content Include="Imagenes\Paquete1\png\003-affiliate marketing.png" />
@@ -2614,11 +2616,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\Sesiones.cs" />
+    <Compile Include="Controllers\ArticulosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\VentasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Articulos.cs" />
+    <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2633,6 +2640,14 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Usuarios\Leer.cshtml" />
     <Content Include="Views\Usuarios\Crear.cshtml" />
+    <Content Include="Views\Usuarios\Editar.cshtml" />
+    <Content Include="Views\Articulos\Leer.cshtml" />
+    <Content Include="Views\Articulos\Crear.cshtml" />
+    <Content Include="Views\Articulos\Editar.cshtml" />
+    <Content Include="Views\Secciones\Header_Simple.cshtml" />
+    <Content Include="Views\Ventas\Ventas_Articulos.cshtml" />
+    <Content Include="Views\Ventas\Cobro.cshtml" />
+    <Content Include="Views\Ventas\Leer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2642,7 +2657,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

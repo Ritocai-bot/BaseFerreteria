@@ -1,4 +1,5 @@
-﻿
+﻿@model Ferreteria.Clases.Sesiones
+
 @{
     Layout = null;
 }
@@ -16,25 +17,25 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <link href="~/CSS/Header_Estilo.css" rel="stylesheet" type="text/css"/>
-    <link href="~/CSS/Footer_Estilo.css" rel="stylesheet" type="text/css" />
-    <link href="~/CSS/Login_Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Footer_Estilo.css" rel="stylesheet" type="text/css" />    
+    <link href="~/CSS/Index_Estilo.css" rel="stylesheet" type="text/css"/>
 
 
 </head>
 <body>
-    @RenderPage("~/Views/Secciones/Header.cshtml")
-    <div> 
-        @{
-            if (true)
-            {
-                <img class="Logo_Cliente" src="#" />
-            }
-            else
-            {
-                @RenderPage("~/Views/Home/Login.cshtml")
-            }
-        }        
+    @{
+        if (Model.SesionesUsuario == "Hola")
+        {
+            @RenderPage("~/Views/Secciones/Header.cshtml")
+        }
+        else
+        {
+            @RenderPage("~/Views/Secciones/Header_Simple.cshtml")
+        }
+    }
+    
+    <div id="Principal"> 
+       <img class="Logo_Cliente" src="~/Imagenes/Logo_Empresa.png" />                          
     </div>
-</body>
-    @RenderPage("~/Views/Secciones/Footer.cshtml")
+</body>    
 </html>

@@ -1,4 +1,5 @@
-﻿
+﻿@model Ferreteria.Models.Usuarios
+
 @{
     Layout = null;
 }
@@ -8,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Agregar</title>
+    <title>Editar</title>
 
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
@@ -31,17 +32,17 @@
     @RenderPage("~/Views/Secciones/Header.cshtml")
     <div class="container">
         <div id="Etiqueta_Principal">
-                <label>
-                    Agregar Usuario
-                </label>            
-        </div>               
+            <label>
+                Editar Usuario
+            </label>
+        </div>
         <div class="row">
-            <div class="col-lg-12 form-horizontal" id="formulario_usuarios"> 
-                <form action="~/Usuarios/InsertarUsuario" method="post">
+            <div class="col-lg-12 form-horizontal" id="formulario_usuarios">
+                <form action="~/Usuarios/EditarUsuario" method="post">
                     <div class="form-group">
                         <label for="#" class="col-lg-3 col-form-label">Nombre Completo: </label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="#" placeholder="Ingrese Nombre Completo">
+                            <input type="text" class="form-control" id="#" placeholder="Ingrese Nombre Completo" value="@ViewBag.Nombre">
                         </div>
                     </div>
                     <div class="form-group">
@@ -54,10 +55,11 @@
                         <label for="" class="col-lg-3 col-form-label"> Tipo de Usuario:</label>
                         <div class="col-lg-6">
                             <select class="form-control" id="">
-                                <option>Caja</option>
-                                <option>Venta Simple</option>                                
-                                <option>Inventario</option>
-                                <option>Administrativo Simple</option>                                
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
                             </select>
                         </div>
                     </div>
@@ -73,14 +75,14 @@
                             <input type="password" class="form-control" id="#" placeholder="Ingrese Contraseña">
                         </div>
                     </div>
-                    <div class="form-group">                        
+                    <div class="form-group">
                         <div id="btn-enviar">
                             <button type="submit" class="btn btn-success">Enviar</button>
                         </div>
                     </div>
-                </form>            
+                </form>
             </div>
-        </div>       
+        </div>
     </div>
 </body>
 </html>

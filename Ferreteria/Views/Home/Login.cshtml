@@ -1,11 +1,32 @@
-﻿
+﻿@model Ferreteria.Clases.Sesiones
+
 @{
-    ViewBag.Title = "Login";
+    Layout = null;
 }
 
-<div class="Login">
+<!DOCTYPE html>
 
-</div>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
 
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/CSS/Header_Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Footer_Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Index_Estilo.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    @RenderPage("~/Views/Secciones/Header_Simple.cshtml")
+    <div id="Principal">
+        Login
+    </div>
+</body>
+</html>
 
 

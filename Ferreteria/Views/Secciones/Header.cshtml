@@ -1,17 +1,24 @@
 ﻿
 @{
     ViewBag.Title = "Header1";
+    Layout = null;
 }
 
     <div class="Principal">
         <div class="Logo_Empresa">
             <div>
                 <a href="@Url.Action("Index","Home")">
-                    <img src="#" />                   
+                    <img src="~/Imagenes/Logo.png" />                   
                 </a>
             </div>
         </div> 
         <div class="Botonera">
+            <div>
+                <a href="@Url.Action("Login","Home")">
+                    <img src="~/Imagenes/Paquete2/png/101-user.png" />
+                    <label> Login </label>
+                </a>
+            </div>
             <div>
                 <a href="@Url.Action("Leer","Usuarios")">
                     <img src="~/Imagenes/Paquete1/png/075-team.png" />
@@ -26,18 +33,24 @@
             </div> 
             <div>
                 <a href="#">
+                    <img src="~/Imagenes/Paquete2/png/101-wallet.png" />
+                    <label> Marcas</label>
+                </a>
+            </div> 
+            <div>
+                <a href="#">
                     <img src="~/Imagenes/Paquete2/png/101-briefcase.png" />
                     <label> Proveedores</label>
                 </a>
             </div>          
             <div>
-                <a href="#">
+                <a href="@Url.Action("Leer","Articulos")">
                     <img src="~/Imagenes/Paquete2/png/101-folder.png" />
                     <label> Articulos</label>
                 </a>
             </div>            
             <div>
-                <a href="#">
+                <a href="@Url.Action("Ventas_Articulos","Ventas")">
                     <img src="~/Imagenes/Paquete1/png/007-files.png" />
                     <label ty> Ventas</label>
                 </a>

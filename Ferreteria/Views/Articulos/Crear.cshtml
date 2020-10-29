@@ -1,0 +1,104 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Agregar</title>
+
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/DataTables/datatables.min.js"></script>
+
+    <script type="text/javascript" src="~/JS/DataTable.js"></script>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/DataTables/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/DataTables/DataTables-1.10.22/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/CSS/Header_Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/Footer_Estilo.css" rel="stylesheet" type="text/css" />
+    <link href="~/CSS/General_Estilo.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/fontawesome/css/all.css" rel="stylesheet" />
+
+</head>
+<body>
+    @RenderPage("~/Views/Secciones/Header.cshtml")
+    <div class="container">
+        <div id="Etiqueta_Principal">
+            <label>
+                Agregar Articulo
+            </label>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 form-horizontal" id="formulario_usuarios">
+                <form action="~/Articulos/InsertarArticulo" method="post">
+                    <div class="form-group">
+                        <label for="#" class="col-lg-3 col-form-label">Nombre Articulo: </label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="#" placeholder="Ingrese Nombre Articulo">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="#" class="col-lg-3 col-form-label">Costo: </label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="#" placeholder="Ingrese Costo">
+                        </div>
+                    </div>              
+                    <div class="form-group">
+                        <label for="#" class="col-lg-3 col-form-label">Precio Unidad: </label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="#" placeholder="Ingrese Precio">
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="#" class="col-lg-3 col-form-label">Precio Mayoreo: </label>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="#" placeholder="Ingrese Precio">
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="" class="col-lg-3 col-form-label"> Nombre Proveedor:</label>
+                        <div class="col-lg-6">
+                            <select class="form-control" id="">
+                                <option>Seleccione un proveedor</option>
+                                <option>Trupper</option>
+                                <option>Edpom</option>
+                                <option>Sisgu</option>
+                                <option>Colmena</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-lg-3 col-form-label"> Nombre Marca:</label>
+                        <div class="col-lg-6">
+                            <select class="form-control" id="">
+                                <option>Seleccione una marca</option>
+                                <option>Trupper</option>
+                                <option>Morales</option>
+                                <option>Hp</option>                                
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="#" class="col-lg-3 col-form-label">Descripción: </label>
+                        <div class="col-lg-6">
+                            <textarea rows="3" class="form-control" placeholder="Ingrese Descripción" id="#"></textarea>                            
+                        </div>
+                    </div>                                                       
+                    <div class="form-group">
+                        <div id="btn-enviar">
+                            <button type="submit" class="btn btn-success">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
