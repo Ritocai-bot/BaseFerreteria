@@ -8,6 +8,5 @@ namespace Ferreteria.Clases
     public class Sesiones
     {
         public string SesionesUsuario { get; set; }
-
     }
 }
