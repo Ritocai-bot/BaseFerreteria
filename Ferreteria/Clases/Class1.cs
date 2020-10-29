@@ -5,9 +5,7 @@ using System.Web;
 
 namespace Ferreteria.Clases
 {
-    public class Sesiones
+    public class Class1
     {
-        public string SesionesUsuario { get; set; }
-
     }
 }
