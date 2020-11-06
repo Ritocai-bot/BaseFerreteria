@@ -7,6 +7,8 @@ namespace Ferreteria.Clases
 {
     public class Sesiones
     {
-        public string SesionesUsuario { get; set; }
+        public int IdUsuario { get; set; }
+        public string NombreUsuario { get; set; }        
+        public int TipoUsuario { get; set; }
     }
 }

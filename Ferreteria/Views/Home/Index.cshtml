@@ -24,13 +24,13 @@
 </head>
 <body>
     @{
-        if (Model.SesionesUsuario == "Hola")
+        if (Model.NombreUsuario=="Vacio")
         {
-            @RenderPage("~/Views/Secciones/Header.cshtml")
+            @RenderPage("~/Views/Secciones/Header_Simple.cshtml")            
         }
         else
         {
-            @RenderPage("~/Views/Secciones/Header_Simple.cshtml")
+            @RenderPage("~/Views/Secciones/Header.cshtml")
         }
     }
     

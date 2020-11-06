@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -9,7 +8,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Agregar</title>
-
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="~/DataTables/datatables.min.js"></script>
@@ -26,61 +24,52 @@
 
     <link href="~/fontawesome/css/all.css" rel="stylesheet" />
 
+
 </head>
 <body>
     @RenderPage("~/Views/Secciones/Header.cshtml")
     <div class="container">
         <div id="Etiqueta_Principal">
-                <label>
-                    Agregar Usuario
-                </label>            
-        </div>               
+            <label>
+                Agregar Proveedor
+            </label>
+        </div>
         <div class="row">
-            <div class="col-lg-12 form-horizontal" id="formulario_usuarios"> 
-                <form action="~/Usuarios/InsertarUsuario" method="post">
+            <div class="col-lg-12 form-horizontal" id="formulario_usuarios">
+                <form action="~/Proveedores/InsertarProveedor" method="post">
                     <div class="form-group">
-                        <label for="#" class="col-lg-3 col-form-label">Nombre Completo: </label>
+                        <label for="#" class="col-lg-3 col-form-label">Nombre Proveedor: </label>
                         <div class="col-lg-6">
-                            <input name="Nombre_Proveedor" type="text" class="form-control" id="#" placeholder="Ingrese Nombre Completo">
+                            <input name="Nombre_Proveedor" type="text" class="form-control" id="#" placeholder="Ingrese Nombre Proveedor">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="#" class="col-lg-3 col-form-label">Telefono: </label>
+                        <label for="#" class="col-lg-3 col-form-label">Nombre Contacto: </label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="#" placeholder="Ingrese Telefono">
+                            <input name="Nombre_Contacto" type="text" class="form-control" id="#" placeholder="Ingrese Nombre Contacto">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="" class="col-lg-3 col-form-label"> Tipo de Usuario:</label>
+                        <label for="#" class="col-lg-3 col-form-label">Correo Proveedor: </label>
                         <div class="col-lg-6">
-                            <select class="form-control" id="">
-                                <option>Caja</option>
-                                <option>Venta Simple</option>                                
-                                <option>Inventario</option>
-                                <option>Administrativo Simple</option>                                
-                            </select>
+                            <input name="Correo_Proveedor" type="text" class="form-control" id="#" placeholder="ejemplo@gmail.com">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="#" class="col-lg-3 col-form-label">Nombre Usuario: </label>
+                        <label for="#" class="col-lg-3 col-form-label">Telefono Proveedor: </label>
                         <div class="col-lg-6">
-                            <input type="text" class="form-control" id="#" placeholder="Ingrese Nombre del Usuario">
+                            <input name="Telefono_Proveedor" type="text" class="form-control" id="#" placeholder="88223423">
                         </div>
-                    </div>
+                    </div>                                        
                     <div class="form-group">
-                        <label for="#" class="col-lg-3 col-form-label">Contraseña: </label>
-                        <div class="col-lg-6">
-                            <input type="password" class="form-control" id="#" placeholder="Ingrese Contraseña">
-                        </div>
-                    </div>
-                    <div class="form-group">                        
                         <div id="btn-enviar">
                             <button type="submit" class="btn btn-success">Enviar</button>
                         </div>
                     </div>
-                </form>            
+                </form>
             </div>
-        </div>       
+        </div>
+    
     </div>
 </body>
 </html>
